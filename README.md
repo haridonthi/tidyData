@@ -1,4 +1,3 @@
-
 **Creating a Tidy dataset from a raw dataset**
 
 _Course Project Instructions:_
