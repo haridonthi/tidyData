@@ -1,7 +1,7 @@
 
 ##subset columns - list of features with 'mean' or 'std'
 features <- read.csv("features.txt", sep=" ", header=FALSE, col.names=c("featureId", "featureName"))
-meanstdFeatures <- subset(features, grepl("mean|std", featureName, ignore.case=FALSE))
+meanstdFeatures <- subset(features, grepl("mean|std", featureName, ignore.case=TRUE))
 
 # read X_test
 xTest <- read.table("X_test.txt", header=FALSE)
@@ -43,3 +43,6 @@ activityLkp <- read.table("activity_labels.txt", col.names=c("activityId","activ
 
 ## output final dataset
 tidyFinal <- merge(activityLkp, combinedData)
+
+write.table(tidyFinal, file="tidyData.txt", row.names=FALSE)
+
