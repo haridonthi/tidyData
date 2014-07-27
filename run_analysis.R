@@ -1,5 +1,5 @@
 
-##subset columns - list of features to get
+##subset columns - list of features with 'mean' or 'std'
 features <- read.csv("features.txt", sep=" ", header=FALSE, col.names=c("featureId", "featureName"))
 meanstdFeatures <- subset(features, grepl("mean|std", featureName, ignore.case=FALSE))
 
